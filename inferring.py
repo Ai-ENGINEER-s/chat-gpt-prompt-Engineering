@@ -73,9 +73,52 @@ Review text : '''{lamp_review}'''
 
 response = get_completion(prompt)
 
-print(response)
+# print(response)
 
 
 
 ## Identify types of emotions
 
+prompt = f"""
+Identify a list of emotions that the writer of the \
+following review is expressing. Include no more than \
+five items in the list. Format your answer as a list of \
+lower-case words separated by commas.
+
+Review text: '''{lamp_review}'''
+"""
+response = get_completion(prompt)
+# print(response)
+
+### Identify anger
+
+prompt = f"""
+Is the writer of the following review expressing anger?\
+The review is delimited with triple backticks. \
+Give your answer as either yes or no.
+
+Review text: '''{lamp_review}'''
+"""
+response = get_completion(prompt)
+# print(response)
+
+## Extract product and company name from customer reviews
+
+
+
+prompt = f"""
+Identify the following items from the review text: 
+- Item purchased by reviewer
+- Company that made the item
+
+The review is delimited with triple backticks. \
+Format your response as a JSON object with \
+"Item" and "Brand" as the keys. 
+If the information isn't present, use "unknown" \
+as the value.
+Make your response as short as possible.
+  
+Review text: '''{lamp_review}'''
+"""
+response = get_completion(prompt)
+print(response)
