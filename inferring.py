@@ -13,7 +13,7 @@ load_dotenv(file_path)
 
 os.getenv("OPENAI_API_KEY")
 
-# in this section we gonna see how to use llm to infer articles . Inferring or deduction in french means to deduct something based on a content . 
+# In this section we gonna see how to use llm to infer articles . Inferring or deduction in french means to deduct something based on a content . 
 
 
 
